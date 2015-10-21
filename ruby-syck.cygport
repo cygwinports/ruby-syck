@@ -1,0 +1,14 @@
+inherit rubygem
+
+NAME="ruby-syck"
+VERSION=1.0.5
+RELEASE=1
+CATEGORY="Ruby"
+SUMMARY="Classic YAML parser for Ruby"
+DESCRIPTION="A gemified version of Syck previously from Ruby stdlib. Syck has
+been removed from Ruby 2.x, and this gem is meant to bridge the gap for people
+that have yet to update their YAML."
+
+PKG_NAMES="${NAME} ${NAME}-doc"
+ruby_syck_CONTENTS="${RUBYGEM_EXTDIR#/} ${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
+ruby_syck_doc_CONTENTS="${RUBYGEM_DOCDIR#/}"
